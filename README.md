@@ -1,5 +1,5 @@
-ASE230-Team-website
-Overview
+# 📌 ASE230-Team-website
+## 📖 Overview
 
 This project is a small PHP site that shows a team index and a detail page per member. It includes a shared helper module and wiring so:
 
@@ -11,15 +11,15 @@ The detail page uses a function to render each work-experience item.
 
 These helpers centralize presentation logic and keep detail.php and index.php thin.
 
-Files Changed / Added
+## 📂 Files Changed / Added
 
 helpers.php (NEW) — shared helper functions:
 
-calculate_age($dob) — returns age in years (int) or null on invalid/missing DOB.
+calculate_age($dob) → returns age in years (int) or null on invalid/missing DOB.
 
-render_member_card(array $member, int $index) — outputs the HTML for one member card (used on index.php).
+render_member_card(array $member, int $index) → outputs the HTML for one member card (used on index.php).
 
-render_work_experience(array $job) — outputs one work experience item (used on detail.php).
+render_work_experience(array $job) → outputs one work experience item (used on detail.php).
 
 index.php (MODIFIED)
 
@@ -39,7 +39,7 @@ The work-experience loop uses render_work_experience($job) for each item.
 
 Shared functions remain in helpers.php instead of embedded in detail.php.
 
-What the Helper Functions Do
+## ⚙️ Helper Functions
 
 calculate_age($dob)
 
@@ -65,7 +65,7 @@ Produces the timeline item markup used on detail.php.
 
 Output sanitized with htmlspecialchars().
 
-Demo DOBs
+## 🎂 Demo DOBs
 
 Sample DOB values were added so ages are visible (current date: Oct 2, 2025):
 
@@ -77,8 +77,8 @@ Charlie Lee — 2006-05-30 → 19
 
 If a DOB is missing, the age will not show.
 
-How to Run Locally
-Using XAMPP
+## 💻 How to Run Locally
+🔹 Using XAMPP
 
 Copy the project to htdocs (e.g., C:\xampp\htdocs\ASE230-Team-website).
 
@@ -90,39 +90,39 @@ http://localhost/ASE230-Team-website/index.php
 
 http://localhost/ASE230-Team-website/detail.php?index=0
 
-Using PHP Built-in Server
+🔹 Using PHP Built-in Server
 php -S localhost:8000
 
 
-Then open http://localhost:8000/index.php.
+Then open: http://localhost:8000/index.php
 
-Quick Verification Checklist
+✅ Quick Verification Checklist
 
-✅ Visit index.php: each member card appears and shows age.
+Index page shows cards with ages.
 
-✅ Click a member card: detail.php shows age and work experience list.
+Detail page shows age + work experiences.
 
-✅ Run php -l helpers.php → no syntax errors.
+php -l helpers.php returns no syntax errors.
 
-✅ Browser console shows no layout issues.
+Browser layout works with no console errors.
 
-Requirements Coverage
+## 📋 Requirements Coverage
 
-Member age function: calculate_age — ✅ Done
+Member age function: calculate_age → ✅ Done
 
-Display age on index & detail pages — ✅ Done
+Display age on index & detail pages → ✅ Done
 
-Card function for index page: render_member_card — ✅ Done
+Card function for index page: render_member_card → ✅ Done
 
-Work experience function for detail page: render_work_experience — ✅ Done
+Work experience function for detail page: render_work_experience → ✅ Done
 
-Helpers kept out of detail.php — ✅ Done
+Helpers kept out of detail.php → ✅ Done
 
-Git Workflow (Simulated Team Collaboration)
+## 🔀 Git Workflow (Simulated Team Collaboration)
 
 To mimic a real team workflow, each feature was developed in its own branch and then merged into main.
 
-Branches and Features
+🌿 Branches and Features
 
 Branch: age-function
 
@@ -148,7 +148,7 @@ Updated detail.php to use it in the work loop.
 
 Commit: Add displayWorkExperience function
 
-Merge Process
+## 🔗 Merge Process
 
 age-function → merged into main
 
@@ -158,9 +158,7 @@ work-function → merged into main
 
 Each merge ensured the main branch contained all current features, simulating a team leader integrating contributions.
 
-Collaborators
-
-(Simulated team for project submission)
+## 👥 Collaborators (Simulated Team)
 
 Alice Johnson
 
@@ -168,4 +166,4 @@ Bob Smith
 
 Charlie Lee
 
-Sri Maligireddy (team lead)
+Sri Maligireddy(Team Lead)
